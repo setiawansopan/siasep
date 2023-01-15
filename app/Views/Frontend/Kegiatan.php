@@ -8,7 +8,7 @@
     <div class="col-lg-12 col-md-12 col-xs-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Jadwal Kegiatan</h4>
+          <h4 class="card-title">Jadwal Pemeliharaan</h4>
           <div class="selected float-right">
             <select class="custom-select">
               <option selected="selected" value="0">Terjadwal</option>

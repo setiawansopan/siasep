@@ -13,7 +13,7 @@
         <form class="forms-sample">
           <div class="form-group">
             <label for="exampleInputName1">Nama</label>
-            <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+            <input type="text" class="form-control" id="exampleInputName1" placeholder="Nama">
           </div>
           <div class="form-group">
             <label for="exampleSelectGender">Lokasi Sarpra</label>
