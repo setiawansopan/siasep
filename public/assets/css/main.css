@@ -833,7 +833,7 @@ hr {
 }
 
 .side-nav-folded .side-nav {
-  width: 65px;
+  width: 80px;
 }
 
 .side-nav-folded .side-nav .side-nav-menu {
@@ -849,7 +849,7 @@ hr {
 }
 
 .side-nav-folded .side-nav .side-nav-menu li a .icon-holder i {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .side-nav-folded .side-nav .side-nav-menu li .dropdown .arrow {
@@ -879,7 +879,7 @@ hr {
     display: none;
   }
   .side-nav-folded .side-nav .side-nav-inner .side-nav-menu > li > a {
-    padding-left: 20px;
+    padding-left: 27px;
   }
   .side-nav-folded .side-nav .side-nav-inner .side-nav-menu > li > a .title {
     display: none;

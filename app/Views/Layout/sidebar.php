@@ -2,53 +2,56 @@
 <div class="side-nav expand-lg">
     <div class="side-nav-inner">
         <ul class="side-nav-menu">
-            <li class="side-nav-header">
-                <span>Navigation</span>
-            </li>
+            <br>
             <li class="nav-item dropdown <?php if ($title == 'Dashboard') echo 'open'; ?>">
                 <a href="/">
                     <span class="icon-holder">
-                        <i class="lni-dashboard"></i>
+                        <i class="lni-home"></i>
                     </span>
                     <span class="title">Dashboard</span>
                 </a>
             </li>
+            <br>
             <li class="nav-item dropdown <?php if ($title == 'Status') echo 'open'; ?>">
-                <a class="dropdown-toggle" href="/status">
+                <a href="/status">
                     <span class="icon-holder">
-                        <i class="lni-cloud"></i>
+                        <i class="lni-list"></i>
                     </span>
                     <span class="title">Status</span>
                 </a>
             </li>
+            <br>
             <li class="nav-item dropdown <?php if ($title == 'Laporan') echo 'open'; ?>">
-                <a class="dropdown-toggle" href="/laporan">
+                <a href="/laporan">
                     <span class="icon-holder">
-                        <i class="lni-layers"></i>
+                        <i class="lni-magnifier"></i>
                     </span>
                     <span class="title">Laporan</span>
                 </a>
             </li>
+            <br>
             <li class="nav-item dropdown <?php if ($title == 'Perijinan') echo 'open'; ?>">
-                <a class="dropdown-toggle" href="/perijinan">
+                <a href="/perijinan">
                     <span class="icon-holder">
-                        <i class="lni-timer"></i>
+                        <i class="lni-check-mark-circle"></i>
                     </span>
                     <span class="title">Perijinan</span>
                 </a>
             </li>
+            <br>
             <li class="nav-item dropdown <?php if ($title == 'Kegiatan') echo 'open'; ?>">
-                <a class="dropdown-toggle" href="/kegiatan">
+                <a href="/kegiatan">
                     <span class="icon-holder">
-                        <i class="lni-package"></i>
+                        <i class="lni-calendar"></i>
                     </span>
                     <span class="title">Kegiatan</span>
                 </a>
             </li>
+            <br>
             <li class="nav-item dropdown <?php if ($title == 'Usulan') echo 'open'; ?>">
-                <a class="dropdown-toggle" href="usulan">
+                <a href="usulan">
                     <span class="icon-holder">
-                        <i class="lni-files"></i>
+                        <i class="lni-bullhorn"></i>
                     </span>
                     <span class="title">Usulan</span>
                 </a>
