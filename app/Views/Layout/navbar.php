@@ -21,7 +21,7 @@
                         </li>
 
                     </ul>
-                    <ul class="nav-right">
+                    <!-- <ul class="nav-right">
                         <li class="search-box">
                             <input class="form-control" type="text" placeholder="Type to search...">
                             <i class="lni-search"></i>
@@ -53,7 +53,7 @@
                                 </li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
             <!-- Header END -->

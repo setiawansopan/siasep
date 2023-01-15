@@ -11,10 +11,9 @@
           <h4 class="card-title">Jadwal Kegiatan</h4>
           <div class="selected float-right">
             <select class="custom-select">
-              <option selected="selected" value="0">Kelas</option>
-              <option value="1">Toilet</option>
-              <option value="2">Laboratorium</option>
-              <option value="3">Masjid</option>
+              <option selected="selected" value="0">Terjadwal</option>
+              <option value="1">Proses</option>
+              <option value="2">Selesai</option>
             </select>
           </div>
         </div>
@@ -22,81 +21,24 @@
           <table class="table table-lg">
             <thead>
               <tr>
-                <td class="text-dark text-semibold">Nama</td>
-                <td class="text-dark text-semibold">Lokasi</td>
-                <td class="text-dark text-semibold">Laporan</td>
+                <td class="text-dark text-semibold">No</td>
+                <td class="text-dark text-semibold">Nama Tempat</td>
+                <td class="text-dark text-semibold">Tanggal</td>
+                <td class="text-dark text-semibold">Kegiatan</td>
                 <td class="text-dark text-semibold">Status</td>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>
-                  <div class="list-media">
-                    <div class="list-item">
-                      <div class="media-img">
-                        <a class="btn btn-circle btn-info text-white">AI</a>
-                      </div>
-                      <div class="info">
-                        <span class="title text-semibold">Arfinda Ilmania</span>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td>Kelas 105</td>
-                <td>Kipas angin rusak tidak jalan</td>
-                <td><a href="#" class="badge badge-danger">Processing</a></td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="list-media">
-                    <div class="list-item">
-                      <div class="media-img">
-                        <a class="btn btn-circle btn-danger text-white">DK</a>
-                      </div>
-                      <div class="info">
-                        <span class="title text-semibold">Dyah Kartika</span>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td>Kamar Mandi</td>
-                <td>Kran rusak tidak bisa keluar air</td>
-                <td><a href="#" class="badge badge-success">Done</a></td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="list-media">
-                    <div class="list-item">
-                      <div class="media-img">
-                        <a class="btn btn-circle btn-success text-white">SL</a>
-                      </div>
-                      <div class="info">
-                        <span class="title text-semibold">Slamet Marmono</span>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td>Ruang Guru</td>
-                <td>Lampu ruang guru mati di sisi utara</td>
-                <td><a href="#" class="badge badge-info">On-hold</a></td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="list-media">
-                    <div class="list-item">
-                      <div class="media-img">
-                        <a class="btn btn-circle btn-primary text-white">UD</a>
-                      </div>
-                      <div class="info">
-                        <span class="title text-semibold">Jumadi</span>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td>Ruang Kepala Sekolah</td>
-                <td>Kamar mandi rusak mampet</td>
-                <td><a href="#" class="badge badge-success">Done</a></td>
-              </tr>
+              <?php for ($i = 1; $i <= 10; $i++) { ?>
+                <tr>
+                  <td><span class="title text-semibold"><?= $i; ?></span></td>
+                  <td>Kelas 302</td>
+                  <td>15 Januari 2023</td>
+                  <td>Perbaikan plavon bocor</td>
+                  <td><a href="#" class="badge badge-success">Terjadwal</a></td>
+                </tr>
+              <?php } ?>
+
             </tbody>
           </table>
         </div>
