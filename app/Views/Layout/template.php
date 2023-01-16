@@ -1,7 +1,7 @@
 <!-- BAGIAN HEADER -->
 <?= $this->include('layout\header'); ?>
 
-<div class="app header-default side-nav-dark">
+<div class="app header-default side-nav-dark side-nav-folded">
     <div class="layout">
 
         <!-- BAGIAN NAVIGASI BAR ATAS -->
