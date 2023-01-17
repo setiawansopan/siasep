@@ -39,8 +39,8 @@
                 </a>
             </li>
             <br>
-            <li class="nav-item dropdown <?php if ($title == 'Kegiatan') echo 'open'; ?>">
-                <a href="/kegiatan">
+            <li class="nav-item dropdown <?php if ($title == 'Pemeliharaan') echo 'open'; ?>">
+                <a href="/pemeliharaan">
                     <span class="icon-holder">
                         <i class="lni-calendar"></i>
                     </span>

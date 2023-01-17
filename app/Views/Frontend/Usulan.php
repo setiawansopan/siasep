@@ -18,8 +18,10 @@
           <div class="form-group">
             <label for="exampleSelectGender">Lokasi Sarpra</label>
             <select class="form-control" id="exampleSelectGender">
-              <option>Kelas</option>
-              <option>Masjid</option>
+              <option value="">--Pilih--</option>
+              <?php foreach ($usulan as $key) { ?>
+                <option value="<?= $key['id']; ?>"><?= $key['ruang_nama']; ?></option>
+              <?php } ?>
             </select>
           </div>
           <div class="form-group m-b-20">

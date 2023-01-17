@@ -29,13 +29,22 @@
               </tr>
             </thead>
             <tbody>
-              <?php for ($i = 1; $i <= 10; $i++) { ?>
+              <?php $i = 1;
+              // dd($pemeliharaan);
+              foreach ($pemeliharaan as $p) { ?>
                 <tr>
-                  <td><span class="title text-semibold"><?= $i; ?></span></td>
-                  <td>Kelas 302</td>
-                  <td>15 Januari 2023</td>
-                  <td>Perbaikan plavon bocor</td>
-                  <td><a href="#" class="badge badge-success">Terjadwal</a></td>
+                  <td><span class="title text-semibold"><?= $i++; ?></span></td>
+                  <td>Ruang <?= $p['ruang_nama']; ?></td>
+                  <td><?= $p['plh_tanggal_mulai']; ?></td>
+                  <td><?= $p['plh_kegiatan']; ?></td>
+                  <td>
+                    <?php if ($p['plh_status'] == 'Terjadwal') $badge = 'badge-info';
+                    if ($p['plh_status'] == 'Proses') $badge = 'badge-warning';
+                    if ($p['plh_status'] == 'Selesai') $badge = 'badge-success';
+                    if ($p['plh_status'] == 'Dibatalkan') $badge = 'badge-danger';
+                    ?>
+                    <a href="#" class="badge <?= $badge; ?>"><?= $p['plh_status']; ?></a>
+                  </td>
                 </tr>
               <?php } ?>
 

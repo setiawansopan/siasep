@@ -36,7 +36,7 @@ $routes->get('/', 'Frontend\Dashboard::index');
 $routes->get('/status', 'Frontend\Status::index');
 $routes->get('/laporan', 'Frontend\Laporan::index');
 $routes->get('/perijinan', 'Frontend\Perijinan::index');
-$routes->get('/kegiatan', 'Frontend\Kegiatan::index');
+$routes->get('/pemeliharaan', 'Frontend\Pemeliharaan::index');
 $routes->get('/usulan', 'Frontend\Usulan::index');
 
 
