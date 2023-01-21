@@ -15,13 +15,13 @@
                           <p class="text-muted">Laporan Masuk</p>
                       </div>
                       <div class="ml-auto">
-                          <h2 class="counter text-primary">234</h2>
+                          <h2 class="counter text-primary"><?= $claporan; ?></h2>
                       </div>
                   </div>
               </div>
               <div class="col-12">
                   <div class="progress">
-                      <div class="progress-bar bg-primary" role="progressbar" style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-primary" role="progressbar" style="width: 100%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
               </div>
           </div>
@@ -37,13 +37,13 @@
                           <p class="text-muted">Terselesaikan</p>
                       </div>
                       <div class="ml-auto">
-                          <h2 class="counter text-info">1,390</h2>
+                          <h2 class="counter text-info"><?= $cselesai; ?></h2>
                       </div>
                   </div>
               </div>
               <div class="col-12">
                   <div class="progress">
-                      <div class="progress-bar bg-info" role="progressbar" style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 100%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
               </div>
           </div>
@@ -59,13 +59,13 @@
                           <p class="text-muted">Proses Berjalan</p>
                       </div>
                       <div class="ml-auto">
-                          <h2 class="counter text-warning">5,723</h2>
+                          <h2 class="counter text-warning"><?= $cproses; ?></h2>
                       </div>
                   </div>
               </div>
               <div class="col-12">
                   <div class="progress">
-                      <div class="progress-bar bg-warning" role="progressbar" style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 100%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
               </div>
           </div>
@@ -81,13 +81,13 @@
                           <p class="text-muted">Perijinan Masuk</p>
                       </div>
                       <div class="ml-auto">
-                          <h2 class="counter text-purple">2,396</h2>
+                          <h2 class="counter text-purple"><?= $cizin; ?></h2>
                       </div>
                   </div>
               </div>
               <div class="col-12">
                   <div class="progress">
-                      <div class="progress-bar bg-purple" role="progressbar" style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-purple" role="progressbar" style="width: 100%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
               </div>
           </div>
@@ -137,57 +137,6 @@
                               <td>Kelas 105</td>
                               <td>Kipas angin rusak tidak jalan</td>
                               <td><a href="#" class="badge badge-danger">Processing</a></td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <div class="list-media">
-                                      <div class="list-item">
-                                          <div class="media-img">
-                                              <a class="btn btn-circle btn-danger text-white">DK</a>
-                                          </div>
-                                          <div class="info">
-                                              <span class="title text-semibold">Dyah Kartika</span>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </td>
-                              <td>Kamar Mandi</td>
-                              <td>Kran rusak tidak bisa keluar air</td>
-                              <td><a href="#" class="badge badge-success">Done</a></td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <div class="list-media">
-                                      <div class="list-item">
-                                          <div class="media-img">
-                                              <a class="btn btn-circle btn-success text-white">SL</a>
-                                          </div>
-                                          <div class="info">
-                                              <span class="title text-semibold">Slamet Marmono</span>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </td>
-                              <td>Ruang Guru</td>
-                              <td>Lampu ruang guru mati di sisi utara</td>
-                              <td><a href="#" class="badge badge-info">On-hold</a></td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <div class="list-media">
-                                      <div class="list-item">
-                                          <div class="media-img">
-                                              <a class="btn btn-circle btn-primary text-white">UD</a>
-                                          </div>
-                                          <div class="info">
-                                              <span class="title text-semibold">Jumadi</span>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </td>
-                              <td>Ruang Kepala Sekolah</td>
-                              <td>Kamar mandi rusak mampet</td>
-                              <td><a href="#" class="badge badge-success">Done</a></td>
                           </tr>
                       </tbody>
                   </table>

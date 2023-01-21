@@ -19,19 +19,26 @@
               <tr>
                 <td class="text-dark text-semibold">No</td>
                 <td class="text-dark text-semibold">Nama</td>
-                <td class="text-dark text-semibold">Lokasi</td>
+                <td class="text-dark text-semibold">Ruang</td>
+                <td class="text-dark text-semibold">Properti</td>
                 <td class="text-dark text-semibold">Laporan</td>
                 <td class="text-dark text-semibold">Status</td>
               </tr>
             </thead>
             <tbody>
-              <?php for ($i = 1; $i <= 8; $i++) { ?>
+              <?php $i=1; foreach($laporan as $l) { ?>
                 <tr>
-                  <td><?= $i; ?></td>
-                  <td><span class="title text-semibold">Arfinda Ilmania</span></td>
-                  <td>Kelas 105</td>
-                  <td>Kipas angin rusak tidak jalan</td>
-                  <td><a href="#" class="badge badge-danger">Processing</a></td>
+                  <td><?= $i++; ?></td>
+                  <td><span class="title text-semibold"><?= $l['lap_nama']; ?></span></td>
+                  <td><?= $l['ruang_nama']; ?></td>
+                  <td><?= $l['properti_nama']; ?></td>
+                  <td><?= $l['lap_keterangan']; ?></td>
+                  <?php if ($l['lap_status'] == 'Terjadwal') $badge = 'badge-info';
+                    if ($l['lap_status'] == 'Proses') $badge = 'badge-warning';
+                    if ($l['lap_status'] == 'Selesai') $badge = 'badge-success';
+                    if ($l['lap_status'] == 'Dibatalkan') $badge = 'badge-danger';
+                    ?>
+                  <td><a href="#" class="badge <?= $badge; ?>"><?= $l['lap_status']; ?></a></td>
                 </tr>
               <?php } ?>
             </tbody>

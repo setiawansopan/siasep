@@ -27,15 +27,20 @@
               </tr>
             </thead>
             <tbody>
-              <?php for ($i = 1; $i <= 10; $i++) { ?>
+              <?php $no = 1;  foreach($ijin as $i) { ?>
                 <tr>
-                  <td><span class="title text-semibold"><?= $i; ?></span></td>
-                  <td><span class="title text-semibold">MPK</span></td>
-                  <td>Kelas 105</td>
-                  <td>15 Januari 2023</td>
-                  <td>15.30 s/d 16.30 </td>
-                  <td>Rapat rutin</td>
-                  <td><a href="#" class="badge badge-success">Terjadwal</a></td>
+                  <td><span class="title text-semibold"><?= $no++; ?></span></td>
+                  <td><span class="title text-semibold"><?= $i['ijn_pengguna']; ?></span></td>
+                  <td><?= $i['ruang_nama']; ?></td>
+                  <td><?= $i['ijn_tanggal']; ?></td>
+                  <td><?= $i['ijn_mulai']; ?> s/d <?= $i['ijn_selesai']; ?> </td>
+                  <td><?= $i['ijn_kegiatan']; ?></td>
+
+                  <?php if ($i['ijn_status'] == 'Terjadwal') $badge = 'badge-info';
+                    if ($i['ijn_status'] == 'Selesai') $badge = 'badge-success';
+                    ?>
+
+                  <td><a href="#" class="badge <?= $badge; ?>"><?= $i['ijn_status']; ?></a></td>
                 </tr>
               <?php } ?>
 

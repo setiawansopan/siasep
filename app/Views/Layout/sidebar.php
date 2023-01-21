@@ -1,5 +1,5 @@
 <!-- Side Nav START -->
-<div class="side-nav expand-lg">
+<div class="side-nav">
     <div class="side-nav-inner">
         <ul class="side-nav-menu">
             <br>
