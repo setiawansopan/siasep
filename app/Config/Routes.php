@@ -30,7 +30,7 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-// ROUTING UNTUK HALAMAN DASHBOARD 
+// ROUTING UNTUK MENU UTAMA
 
 $routes->get('/', 'Frontend\Dashboard::index');
 $routes->get('/status', 'Frontend\Status::index');
@@ -39,6 +39,16 @@ $routes->get('/perijinan', 'Frontend\Perijinan::index');
 $routes->get('/pemeliharaan', 'Frontend\Pemeliharaan::index');
 $routes->get('/usulan', 'Frontend\Usulan::index');
 
+// ROUTING MENU LAPORAN
+$routes->get('/lptambah', 'Frontend\Laporan::tambah');
+$routes->post('/lpsimpan', 'Frontend\Laporan::simpan');
+
+//  MENU PEMINJAMAN
+$routes->get('pjtambah', 'Frontend\Perijinan::tambah');
+$routes->post('pjsimpan', 'Frontend\Perijinan::simpan');
+
+// ROUTE MENU USULAN
+$routes->post('ussimpan', 'Frontend\Usulan::simpan');
 
 /*
  * --------------------------------------------------------------------

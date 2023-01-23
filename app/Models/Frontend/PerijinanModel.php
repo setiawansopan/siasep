@@ -14,10 +14,10 @@ class PerijinanModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['ijn_ruang_id', 'ijn_pengguna', 'ijn_penanggungjawab', 'ijn_kegiatan', 'ijn_perangkat', 'ijn_tanggal', 'ijn_mulai', 'ijn_selesai'];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
@@ -32,5 +32,4 @@ class PerijinanModel extends Model
         $query = $builder->get();
         return $query->getResultArray();
     }
-
 }

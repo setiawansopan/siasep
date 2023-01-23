@@ -11,7 +11,7 @@
               <div class="col-12">
                   <div class="d-flex no-block align-items-center">
                       <div>
-                          <div class="icon"><i class="lni-display"></i></div>
+                          <div class="icon"><i class="lni-notepad"></i></div>
                           <p class="text-muted">Laporan Masuk</p>
                       </div>
                       <div class="ml-auto">
@@ -33,7 +33,7 @@
               <div class="col-12">
                   <div class="d-flex no-block align-items-center">
                       <div>
-                          <div class="icon"><i class="lni-pencil-alt"></i></div>
+                          <div class="icon"><i class="lni-check-mark-circle"></i></div>
                           <p class="text-muted">Terselesaikan</p>
                       </div>
                       <div class="ml-auto">
@@ -55,8 +55,8 @@
               <div class="col-12">
                   <div class="d-flex no-block align-items-center">
                       <div>
-                          <div class="icon"><i class="lni-empty-file"></i></div>
-                          <p class="text-muted">Proses Berjalan</p>
+                          <div class="icon"><i class="lni-construction"></i></div>
+                          <p class="text-muted">Dikerjakan</p>
                       </div>
                       <div class="ml-auto">
                           <h2 class="counter text-warning"><?= $cproses; ?></h2>
@@ -77,7 +77,7 @@
               <div class="col-12">
                   <div class="d-flex no-block align-items-center">
                       <div>
-                          <div class="icon"><i class="lni-cart"></i></div>
+                          <div class="icon"><i class="lni-calendar"></i></div>
                           <p class="text-muted">Perijinan Masuk</p>
                       </div>
                       <div class="ml-auto">
@@ -121,23 +121,30 @@
                           </tr>
                       </thead>
                       <tbody>
-                          <tr>
-                              <td>
-                                  <div class="list-media">
-                                      <div class="list-item">
-                                          <div class="media-img">
-                                              <a class="btn btn-circle btn-info text-white">AI</a>
-                                          </div>
-                                          <div class="info">
-                                              <span class="title text-semibold">Arfinda Ilmania</span>
+                          <?php foreach ($progress as $p) {
+                                if ($p['lap_status'] == 'Terjadwal') $badge = 'badge-info';
+                                if ($p['lap_status'] == 'Proses') $badge = 'badge-warning';
+                                if ($p['lap_status'] == 'Selesai') $badge = 'badge-success';
+                                if ($p['lap_status'] == 'Dibatalkan') $badge = 'badge-danger';
+                            ?>
+                              <tr>
+                                  <td>
+                                      <div class="list-media">
+                                          <div class="list-item">
+                                              <div class="media-img">
+                                                  <a class="btn btn-circle <?= $badge; ?> text-white"><?= strtoupper(substr($p['lap_nama'], 0, 2)); ?></a>
+                                              </div>
+                                              <div class="info">
+                                                  <span class="title text-semibold"><?= $p['lap_nama']; ?></span>
+                                              </div>
                                           </div>
                                       </div>
-                                  </div>
-                              </td>
-                              <td>Kelas 105</td>
-                              <td>Kipas angin rusak tidak jalan</td>
-                              <td><a href="#" class="badge badge-danger">Processing</a></td>
-                          </tr>
+                                  </td>
+                                  <td><?= $p['ruang_nama']; ?></td>
+                                  <td><?= $p['lap_keterangan']; ?></td>
+                                  <td><a href="#" class="badge <?= $badge; ?>"><?= $p['lap_status']; ?></a></td>
+                              </tr>
+                          <?php } ?>
                       </tbody>
                   </table>
               </div>

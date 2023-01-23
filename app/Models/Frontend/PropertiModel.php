@@ -4,10 +4,10 @@ namespace App\Models\Frontend;
 
 use CodeIgniter\Model;
 
-class PemeliharaanModel extends Model
+class PropertiModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'asp_pemeliharaan';
+    protected $table            = 'asp_properti';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
@@ -23,13 +23,20 @@ class PemeliharaanModel extends Model
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
 
-    function getAll()
-    {
-        $db      = \Config\Database::connect();
-        $builder = $db->table('asp_pemeliharaan');
-        $builder->select('*');
-        $builder->join('asp_ruang', 'asp_pemeliharaan.id = asp_ruang.id');
-        $query = $builder->get();
-        return $query->getResultArray();
-    }
+    // Validation
+    protected $validationRules      = [];
+    protected $validationMessages   = [];
+    protected $skipValidation       = false;
+    protected $cleanValidationRules = true;
+
+    // Callbacks
+    protected $allowCallbacks = true;
+    protected $beforeInsert   = [];
+    protected $afterInsert    = [];
+    protected $beforeUpdate   = [];
+    protected $afterUpdate    = [];
+    protected $beforeFind     = [];
+    protected $afterFind      = [];
+    protected $beforeDelete   = [];
+    protected $afterDelete    = [];
 }

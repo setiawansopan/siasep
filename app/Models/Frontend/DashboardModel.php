@@ -12,24 +12,28 @@ class DashboardModel extends Model
         $this->db = \Config\Database::connect();
     }
 
-    function getCountLaporan() {
+    function getCountLaporan()
+    {
         $builder = $this->db->table('asp_laporan');
         return $builder->countAllResults();
     }
 
-    function getCountSelesai() {
+    function getCountSelesai()
+    {
         $builder = $this->db->table('asp_laporan')
-        ->like('lap_status', 'Selesai');
+            ->like('lap_status', 'Selesai');
         return $builder->countAllResults();
     }
 
-    function getCountProses() {
+    function getCountProses()
+    {
         $builder = $this->db->table('asp_laporan')
-        ->like('lap_status', 'Proses');
+            ->like('lap_status', 'Proses');
         return $builder->countAllResults();
     }
 
-    function getCountIzin() {
+    function getCountIzin()
+    {
         $builder = $this->db->table('asp_perijinan');
         return $builder->countAllResults();
     }
