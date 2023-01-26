@@ -7,7 +7,7 @@
   <div class="col-12">
       <div class="card">
           <div class="card-header border-bottom">
-              <h4 class="card-title">Laporan Kerusakan</h4>
+              <h4 class="card-title">Tambah Laporan</h4>
           </div>
           <div class="card-body">
               <form class="forms-sample" method="post" action="/lpsimpan">
@@ -40,8 +40,17 @@
                       <label for="lap_keterangan">Deskripsi Laporan</label>
                       <textarea class="form-control" id="lap_keterangan" rows="4" name="lap_keterangan"></textarea>
                   </div>
+
+                  <div class="form-group">
+                      <label>Foto</label>
+                      <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile02">
+                          <label class="custom-file-label" for="inputGroupFile02">Pilih file</label>
+                      </div>
+                  </div>
+
                   <button type="submit" class="btn btn-common mr-3">Kirim</button>
-                  <button class="btn btn-light">Batal</button>
+                  <a href="/laporan" class="btn btn-light">Batal</a>
               </form>
           </div>
       </div>

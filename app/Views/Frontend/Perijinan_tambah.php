@@ -5,6 +5,11 @@
   <?= $this->section('konten'); ?>
 
   <div class="col-12">
+  <?php if (empty(session()->getFlashdata('pesan'))) :  ?>
+        <div class="alert alert-warning" role="alert">
+          <strong>Perhatian. </strong> Pengajuan izin kegiatan siswa tanpa persetujuan bidang kesiswaan tidak akan diaprove. 
+        </div>
+      <?php endif; ?>
       <div class="card">
           <div class="card-header border-bottom">
               <h4 class="card-title">Pengajuan Izin</h4>
@@ -61,7 +66,7 @@
                       </div>
                   </div>
                   <button type="submit" class="btn btn-common mr-3">Kirim</button>
-                  <button class="btn btn-light">Batal</button>
+                  <a href="/perijinan" class="btn btn-light">Batal</a>
               </form>
           </div>
       </div>
